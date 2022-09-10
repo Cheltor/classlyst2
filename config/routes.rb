@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :businesses
   
   devise_scope :user do
     # Redirests signing out users back to sign-in
     get "students", to: "devise/sessions#new"
+
+    get "businesses", to: "devise/sessions#new"
   end
   
   devise_for :students
