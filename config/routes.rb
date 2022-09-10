@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :universities
   devise_for :businesses
   
   devise_scope :user do
